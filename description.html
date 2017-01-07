@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../CSS/desktop.css">
+  <link rel="stylesheet" media="screen and (max-width: 990px)" href="../CSS/RD.css" />
+<style>
+</style>
+<title>Description-Projet tutoré</title>
+</head>
+<body>
+
+<div class="wrapper">
+  <nav id="leftsidebar">
+    <ul id="menulist">
+      <li class="menuitem"><a href="../index.html">Accueil</a></li>
+      <li class="menuitem"><a href="description.html">Description</a></li>
+      <li class="menuitem"><a href="galerie.html">Galerie</a></li>
+      <li class="menuitem"><a href="contact.html">Contact</a></li>
+   </ul>
+  </nav>
+
+
+  <div id="main">
+  <h1>L'évolution des systèmes de cryptographie</h1>
+  <h2>I- La cryptographie jusqu’à l’apparition des TICs</h2>
+<h3>1. Antiquité et moyen age</h3>
+<h4>a. Le chiffrement par décalage ou Chiffre de César</h4>
+
+<p>
+Dans l’Antiquité, Jules César utilisait un principe de chiffrement très simple mais redoutable pour l’époque : le chiffrement par décalage aussi appelé “Chiffre de César”.
+Le principe du chiffrement par décalage est de remplacer chaque lettre d’un message par une autre décalé de n rang dans l’alphabet. Ce décalage doit rester fixe et fait office de clé de chiffrement et de déchiffrement. Pour les dernières lettres de l’alphabet, le décalage reprend au début de celui-ci.
+Le déchiffrement s’effectue en remplaçant chaque lettre du message chiffré en décalant dans le sens inverse de n rang. Ce chiffrement ne dispose donc que de 26 clés possibles ! Ainsi, il n’offre aucune sécurité de communication de nos jours.
+</p>
+
+<p><a href="galerie.html#cesar">illustration explicative du chiffrement de césar</a></p>
+
+<p>
+Cette méthode de chiffrement est dite monoalphabétique car une lettre ne peut-être remplacée qu’avec une seule (avec une même clé bien entendu). 
+
+Ainsi il est facile de décrypter le message (sans la clé donc) avec l’usage de l’analyse fréquentielle. Dans chaque langue, les lettres ont une certains fréquence d’apparition (comme le E en français qui a une grande fréquence d’apparition). En analysant la fréquence d'apparition des lettres dans le message codé, on peut alors faire des suppositions quant à la lettre correspondante du message clair.
+</p>
+
+<h4>b. Chiffrement au Moyen-Age</h4>
+
+<p>
+Le chiffre de Vigenère (16ème siècle) : 
+Une certaine ressemblance avec le Chiffre de César, mais celui-ci est plus puissant.
+Chiffrement par subsitution et polyalphabétique (et non monoalphabétqiue comme le Chiffre de César)
+Une même lettre du message d’origine peut être remplacée par des lettres différentes suivant sa position dans le message.
+Ce chiffre utilise aussi une clé qui est ici un message (avec des lettres ou plus généralement des caractères) grâce auquel on peut remplacer chaque lettre du message à chiffrer.
+Chiffre particulièrement puissant pour l’époque : cryptage extrêmement difficile sans la clé
+Nombre de clés infini (le mot clé est composé d’un nombre de lettres infini)
+</p>
+
+<p><a href="galerie.html#vigenere">illustration de la table de Vigenère</a></p>
+
+<h3>2. Renaissance et 2nd guerre mondiale</h3>
+<h4>a. Renaissance</h4>
+
+<p>
+A la Renaissance la transposition et la substitution sont reconnus comme étant des principes fondamentaux qui sont employés séparément ou en combinaison. Pour le déchiffrement, on analyse la fréquence d’apparition des symboles (la fréquence d’apparition d’une lettre dépend de la langue utilisée).
+XIVème siècle: -cadran d’Alberti/nomenclateur (code secret le plus utilisé en Occident jusqu’à la 1GM), consiste en un dictionnaire qui permet de transcrire en chiffres ou en signes mystérieux des mots et des syllabes courantes. Peu sécurisé car on peut voler les nomenclateurs appartenant aux autres nations.
+1466: cadran chiffrant, il est constitué de deux disques sur lesquels est écrit l'alphabet. Sur le petit disque mobile, l'alphabet (parfois dans le désordre) constitue l'alphabet de substitution.
+</p>
+
+<p><a href="galerie.html#cadran">illustration du cadran</a></p>
+
+<p>
+XVIè s.: -système case-cochon, mis au point par les francs-maçons, les lettres sont transformées en pictogrammes, comme sur le dessin ci-dessous. Les lettres sont ainsi les cochons placés dans les cases. Chacune est représentée par les traits de la case dans laquelle elle se trouve. Pour décrypter le message, il suffit de disposer d'une grille identique.
+</p>
+<p><a href="galerie.html#cochon">illustration explicative</a></p>
+
+<p>
+-grille à trous, l'expéditeur et le destinataire disposent tous deux d'une grille identique trouée spécialement. L'expéditeur écrit dans les cases de la grille les lettres de son message. En retirant la grille, il complète les espaces blancs pour "noyer" les caractères "utiles" dans des caractères sans importance. Il suffit alors au destinataire d'appliquer la même grille pour disposer du message. On peut en tirer une version plus mathématique. On a une clé composée d'une suite de chiffres. Chaque chiffre définit l'espacement entre deux caractères du message. On pose , la clé de chiffrement ;  le texte clair ;  le texte chiffré et  le dernier élément de  traité.
+Guerre d’indépendance: - Benedict Arnold (1741 - 1801) trahit les Etats-Unis pour l'Angleterre et communiqua aux anglais d'importants renseignements. Pour faire passer ses messages, il convint avec les anglais d'un dictionnaire, ouvrage de référence, qui lui permettrait de chiffrer ses messages. Au lieu de crypter lettre à lettre, le faisait mot par mot. Ainsi, chaque mot était caractérisé par trois nombres : le numéro de la page du dictionnaire ou le mot figurait, le numéro de la ligne ou se trouvait le mot, la position du mot dans cette ligne.
+-cylindre de Jefferson, on dispose d'un certain nombre de roues sur lesquels l'alphabet complet est inscrit, à chaque fois dans un ordre différent. Il suffit de faire tourner les roues pour écrire le message sur une même ligne. On choisit alors une ligne au hasard, où les lettres ne veulent plus rien dire, et c'est cette ligne qui fera office de cryptogramme. Le correspondant n'a qu'à reporter le cryptogramme sur son propre cylindre, et de regarder autant de lignes plus haut que nécessaire pour obtenir le message original.
+
+1563: chiffre de Porta/Bellaso, méthode de chiffrement polyalphabétique (l'alphabet de chiffrement change à chaque lettre) et dont la sécurité repose sur une clé qui peut changer à chaque message.
+</p>
+<p><a href="galerie.html#polyalpha">illustration explicative</a></p>
+
+
+<h4>b. Seconde Guerre Mondiale</h4>
+<p>-Enigma
+Crée avant seconde GM en 1923 par Dr Arthur Scherbius
+Utilisé par les Allemands pour coder leurs messages/communications
+Décoder par les anglais (Turing) avec l’aide des français et des polonais
+Fonctionne avec un principe assez simple de rotor et de câble:
+-Il y avait trois rotor qui était choisi parmi cinq et installé dans la machine
+-Les rotors fonctionne avec un système d'incrémentation, comme un compteur de vitesse(le rotor 2 s'incrémente de un quand le premier a fait un tour, et ainsi de suite)
+-Pour compléter ceci, un système de câblage permet de changer les combinaisons en plus des trois retors
+Selon une étude si enigma n’avait pas existé >> la seconde GM aurait duré 2 ans de plus et fait 14 millions de morts en plus
+</p>
+
+<p><a href="galerie.html#enigma">illustration explicative</a></p>
+
+<p>
+-Date: 1923
+-Créateur: Dr Arthur Scherbius (ingénieur en électricité)
+-Fonctionnement: 
+-Trois rotors sont présent dans la machine. Ils fonctionne avec un système d'incrémentation, comme un compteur de vitesse(le rotor 2 s'incrémente de un quand le premier a fait un tour, et ainsi de suite)
+-Pour compléter ceci, un système de câblage permet de changer les combinaisons en plus des trois retors
+-Ainsi il y a 158 962 055 502 170 826 036 000 possibilités pour configurer la machine enigma
+-Code talkers
+Quand les americains rentrent en guerre contre le Japon, ils cherchent un moyen de cryptage facile pour les hommes mais impossible a décoder pour la Japonnais. Ainsi , ils utilisent la langue maternel des Indiens d’Amérique pour transmettre les messages codé. Il a existé plusieurs langue parlé, et donc incompréhensible par l’ennemi. Parmi celle là:
+-La langue cherokees
+-La langue cherokkes
+-La langue Navajo (ce code est repris parfois sous le nom de “code Navajo”
+
+-Date: Seconde Guerre Mondiale
+-Créateur: Les militaires américains
+Fonctionnement: Les militaires américains utilisaient leurs langues maternelles pour communiquer, comme cette langue était inconnu des Japonais, il ne pouvait pas comprendre les communications intercepté 
+</p>
+
+<h4>c. DES</h4>
+<p>Le Data Encryption Standard (DES) était un algorithme de chiffrement utilisé depuis la fin des années 1970 jusqu'à la fin des années 1990, notamment dans le 
+système de mot de passe UNIX. Il est surtout connu comme le premier chiffrement accessible au public et adopté une agence nationale, la National
+Security Agency, qui s'occupe de la défense informatique du gouvernement américain.
+Celui ci étant accessible au public, sa publication entraina un grand intêret pour la cryptographie.
+L'algorithme transforme tout simplement un bloc de 64 bits en un autre. Pour cela, il permutait d'abord les bits, puis les soumettaient à 16 cycles d'une transformation. Ces transformations étaient faite à partir d'une clé, calculée à partir de la clé initiale de l'utilisateur.
+Le résultat du dernier tour était alors transformé par la fonction inverse de la permutation initiale.
+Ce chiffrement fut renforcé en 1984 puis en 1998, devenant basé sur une clé de 119 bits, puis de 168 bits.
+Cette dernière variante, appelée Tripla DES, était cependant trop lente, malgré sa sécurité assurée.L'augmentation de la puissance des ordinateurs a fini par rendre complètement obsolète le standart original, puisque ce chiffrement avait été brisé en
+56 heures seulement en 1997.
+Le DES fut donc abandonné, au profit de son successeur, l'Advanced Encryption Standard largement utilisé de nos jours. (AES)</p>
+
+<h2>III- La cryptographie aujourd’hui</h2>
+<h3>1.Différence entre chiffrage et cryptage</h3>
+<p>Le chiffrement est un procédé qui rend un document illisible à toute personne n’ayant pas la clé de déchiffrement.
+Le déchiffrement est le procédé qui inverse le chiffrement à l’aide de la clé de déchiffrement, récupérant ainsi le document dans son état d’origine.
+Le décryptage est le procédé qui tente de récupérer le document dans son état d’origine sans la clé de déchiffrement.
+Le mot “cryptage” n’a pas de sens concret.
+
+Le chiffrement symétrique repose sur le principe de fonctionnement suivant : une clé de chiffrement est partagée entre les deux interlocuteurs. Cette clé permet à la fois de chiffrer et de déchiffrer un message.
+Seulement, la simple fait de transmettre en clair la clé est un faille de sécurité.
+Le chiffrement asymétrique (chiffrement RSA), quant à lui, fait intervenir une clé dite publique, partagée entre les deux interlocuteurs, permettant de chiffrer un message mais pas de le déchiffrer. Une autre clé dite privée sert à déchiffrer un message, mais celle-ci est conservée par le destinataire du message. Autrement dit, il faut appliquer ce processus une fois dans chaque sens (deux fois au total) afin d’établir un protocol chiffré sécurisé. Pour palier à ce problème, il suffit de transmettre une clé de chiffrage symétrique chiffrée avec le protocol de chiffrage asymétrique.</p>
+
+<h3>2. Le cryptage par clé</h3>
+<p>Idée de conclusion / mot final / motd : Au final, la cryptographie repose aujourd’hui sur le secret de l’algorithme et des clés d'encryption. On ne connaît pas concrètement d’algorithme de cryptage infaillible.</p>
+
+</div>
+</div>
+
+
+
+<footer class="footer">
+
+  
+       <p>   <a class="textFooter" href="http://www.univ-lyon1.fr/"> ► Université Claude Bernard </a>  </p>
+
+       <p>  <a class="textFooter" href="http://iut.univ-lyon1.fr/"> ► IUT Lyon 1 </a>  </p>
+    
+
+   
+     <p class="center">Site réalisé par Justine Cohen et Tom Thevenin</p>
+
+     <img class="imageFooter" alt="Logo iut couleur" src="../ressources/logo/logo_iut_couleur.png" />
+
+  </footer>
+
+
+
+
+</body>
+</html>
